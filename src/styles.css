@@ -11,7 +11,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
@@ -22,14 +23,14 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("open-a-bakery-header.jpg") no-repeat center center / cover;
+    url("assets/open-a-bakery-header.jpg") no-repeat center center / cover;
   display: flex;
   flex-direction: column;
 }
 
 /* HERO: цял екран, само снимка */
 .hero-content {
-  flex: 1;           /* fills available height */
+  flex: 1; /* fills available height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +51,7 @@ body {
 }
 
 /* Централен текст */
-.hero-text {
+#content {
   margin: auto;
   text-align: center;
   padding: 32px 24px;
@@ -59,12 +60,14 @@ body {
   box-shadow: 0 10px 30px var(--shadow);
   max-width: 920px;
 }
-.hero-text h1 {
+
+#content h1 {
   margin: 0 0 8px 0;
   font-size: clamp(32px, 4.2vw, 56px); /* добре стои на лаптоп */
   line-height: 1.1;
 }
-.hero-text p {
+
+#content p {
   margin: 0 0 18px 0;
   font-size: clamp(16px, 1.4vw, 22px);
 }
