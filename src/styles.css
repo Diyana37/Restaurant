@@ -1,3 +1,86 @@
+:root {
+  --accent: #ffcc66;
+  --accent-hover: #e6b84d;
+  --text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Нулиране и основа */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
 body {
-    background-color: beige;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("open-a-bakery-header.jpg") no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO: цял екран, само снимка */
+.hero-content {
+  flex: 1;           /* fills available height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 56px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Централен текст */
+.hero-text {
+  margin: auto;
+  text-align: center;
+  padding: 32px 24px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px var(--shadow);
+  max-width: 920px;
+}
+.hero-text h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(32px, 4.2vw, 56px); /* добре стои на лаптоп */
+  line-height: 1.1;
+}
+.hero-text p {
+  margin: 0 0 18px 0;
+  font-size: clamp(16px, 1.4vw, 22px);
+}
+
+/* Бутон */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--accent);
+  color: #333;
+  border-radius: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
 }
