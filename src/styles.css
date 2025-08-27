@@ -5,7 +5,6 @@
   --shadow: rgba(0, 0, 0, 0.4);
 }
 
-/* Нулиране и основа */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +14,10 @@ html,
 body {
   height: 100%;
 }
-body {
+
+/* Home */
+
+body.home-section {
   font-family: Arial, sans-serif;
   color: var(--text);
   background: linear-gradient(
@@ -28,15 +30,13 @@ body {
   flex-direction: column;
 }
 
-/* HERO: цял екран, само снимка */
 .hero-content {
-  flex: 1; /* fills available height */
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Навигация */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -48,9 +48,9 @@ body {
 .logo {
   font-weight: 700;
   font-size: 1.25rem;
+  color: white;
 }
 
-/* Централен текст */
 #content {
   margin: auto;
   text-align: center;
@@ -63,7 +63,7 @@ body {
 
 #content h1 {
   margin: 0 0 8px 0;
-  font-size: clamp(32px, 4.2vw, 56px); /* добре стои на лаптоп */
+  font-size: clamp(32px, 4.2vw, 56px); 
   line-height: 1.1;
 }
 
@@ -72,7 +72,6 @@ body {
   font-size: clamp(16px, 1.4vw, 22px);
 }
 
-/* Бутон */
 .btn {
   display: inline-block;
   padding: 12px 26px;
@@ -86,4 +85,80 @@ body {
 .btn:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
+}
+
+/* Menu */
+
+body.menu-section {
+  background: #fffaf3; /* light bakery background */
+  color: #333;
+  min-height: 100vh; /* allow scrolling if needed */
+}
+
+/* remove fullscreen flex from homepage */
+body.menu-section .hero-content {
+  display: block;
+  height: auto;
+  padding: 60px 40px;
+}
+
+body.menu-section .hero {
+  background: #333; /* dark nav */
+  height: auto;
+}
+
+body.menu-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+body.menu-section .subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid for menu items */
+body.menu-section .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+body.menu-section .card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+body.menu-section .card:hover {
+  transform: translateY(-5px);
+}
+
+body.menu-section .card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+body.menu-section .card h3 {
+  margin: 10px 0 6px;
+}
+
+body.menu-section .card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+body.menu-section .price {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  color: #e6b84d;
 }
