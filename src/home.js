@@ -13,7 +13,7 @@ export function renderHome() {
     subHeading.textContent = "Freshly baked bread and pastries every morning";
 
     const button = document.createElement("button");
-    button.setAttribute("id", "menu-main")
+    button.setAttribute("id", "menu-main");
     button.classList.add("btn", "btn-link");
     button.textContent = "Menu";
 
