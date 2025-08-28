@@ -1,3 +1,4 @@
+import { renderAbout } from "./about.js";
 import { bodySectionClasses } from "./constants.js";
 import { renderHome } from "./home.js";
 import { renderMenu } from "./menu.js";
@@ -30,5 +31,7 @@ export function switchContent(btnId) {
     renderHome();
   } else if (btnId === "menu-nav" || btnId === "menu-main") {
     renderMenu();
+  } else if (btnId === "about-nav") {
+    renderAbout();
   }
 }

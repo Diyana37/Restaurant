@@ -14,6 +14,7 @@ export function renderMenu() {
 
     const subHeading = document.createElement("p");
     subHeading.textContent = "Freshly baked bread and pastries every morning";
+    subHeading.classList.add("subtitle");
 
     const section = document.createElement("section");
     section.classList.add("grid");
